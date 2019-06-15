@@ -10,7 +10,7 @@
 #include <IRsend.h>
 
 const char* server = "95.161.37.71";  // server's address
-const char* resource = "/controler.php?id=1778";                    // http resource
+const char* resource = "/controler.php?id=1778";                    // http resource plus id
 const unsigned long BAUD_RATE = 9600;                 // serial connection speed
 const unsigned long HTTP_TIMEOUT = 10000;  // max respone time from server
 const size_t MAX_CONTENT_SIZE = 512;       // max size of the HTTP response
@@ -29,8 +29,8 @@ const int rel13 = 13;
 const char* json = "{\"ControlerID\":\"1777\",\"pc1\":ok,\"pc2\":\"rest\"}";
 
 
-const char* ssid = "gigaiii";
-const char* pass = "19261926";
+const char* ssid = "ssid";
+const char* pass = "password";
 int i =0;
 char incomingBytes[3];
 bool skipResponseHeaders;
@@ -41,7 +41,6 @@ struct UserData {
   char pk9[32];
 };
 
-//WiFiServer server(555);
 IRsend irsend(3);
 
 void setup() 
